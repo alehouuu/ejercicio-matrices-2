@@ -12,8 +12,6 @@ public class Main {
 
         double[][] notas = new double[estudiantes][materias];
         double sumaGeneral = 0;
-
-        // Registro de notas
         for (int i = 0; i < estudiantes; i++) {
             for (int j = 0; j < materias; j++) {
                 do {
@@ -24,8 +22,6 @@ public class Main {
                 sumaGeneral += notas[i][j];
             }
         }
-
-        // Mostrar matriz
         System.out.println("\nTabla de notas:");
         for (int i = 0; i < estudiantes; i++) {
             for (int j = 0; j < materias; j++) {
@@ -33,8 +29,6 @@ public class Main {
             }
             System.out.println();
         }
-
-        // Promedio por estudiante
         System.out.println("\nPromedio por estudiante:");
         for (int i = 0; i < estudiantes; i++) {
             double suma = 0;
@@ -43,8 +37,6 @@ public class Main {
             }
             System.out.println("Estudiante " + (i + 1) + ": " + (suma / materias));
         }
-
-        // Promedio por materia
         System.out.println("\nPromedio por materia:");
         for (int j = 0; j < materias; j++) {
             double suma = 0;
@@ -53,8 +45,6 @@ public class Main {
             }
             System.out.println("Materia " + (j + 1) + ": " + (suma / estudiantes));
         }
-
-        // Promedio general
         double promedioGeneral = sumaGeneral / (estudiantes * materias);
         System.out.println("\nPromedio general: " + promedioGeneral);
     }
